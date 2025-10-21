@@ -33,7 +33,7 @@ src/
 
 ## 🎯 Funcionalidades Implementadas
 
-### Gestión de Estado con React Hooks
+### Gestión de Estado
 ```javascript
 const [items, setItems] = useState([]);
 const [isLoading, setIsLoading] = useState(true);
@@ -81,6 +81,14 @@ Feedback Inmediato: Estados de carga y mensajes de error
 Navegación Intuitiva: Filtros claros y accesibles
 
 Diseño Responsive: Adaptable a móviles, tablets y desktop
+
+
+Vista previa del proyecto
+
+![IPantallas grandes](src/images/img1.png)
+![Pantallas medianas](src/images/img2.png)
+![Pantallas pequeñas](src/images/img3.png)
+
 
 Esquema de Colores
 Primario: #001f37 (Azul oscuro)
