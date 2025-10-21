@@ -1,0 +1,89 @@
+.menu-item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 280px; /* Ancho fijo */
+  height: 400px; /* Alto fijo */
+  margin: 0 auto; /* Centrar si es necesario */
+}
+
+/* Imagen - tamaño fijo */
+.image-container {
+  width: 100%;
+  height: 180px; /* Altura fija */
+  overflow: hidden;
+  flex-shrink: 0; /* No se reduce */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-info {
+  padding: 1rem;
+  flex: 1; /* Ocupa todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*ayuda para que el boton se ponga abajo*/
+}
+
+.item-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  display: -webkit-box; /* Limitar a 2 líneas máximo */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-shrink: 0; /* No se reduce */
+}
+
+.item-category {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex-shrink: 0; /* No se reduce */
+}
+
+.item-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #7a2e38;
+  margin-bottom: 1rem;
+  flex-shrink: 0; /* No se reduce */
+}
+
+/* Botón siempre abajo */
+.add-button {
+  width: 100%;
+  padding: 10px;
+  background: #001f37;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: auto; /* empuja el botón abajo */
+  flex-shrink: 0; /* No se reduce */
+}
+
+.add-button:hover {
+  background: #80375e;
+}
+
+/* Mensaje temporal */
+.success-message {
+  background-color: #e561a9;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  flex-shrink: 0; /* No se reduce */
+}

@@ -1,16 +1,111 @@
-# React + Vite
+# 🍽️ Restaurante Bienvenido - Menú Digital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web moderna desarrollada en React que muestra un menú interactivo de restaurante consumiendo datos en tiempo real de TheMealDB API.
 
-Currently, two official plugins are available:
+## 🚀 Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Menú interactivo** con filtros por categoría (Seafood, Pasta, Dessert)
+- **Diseño 100% responsive** para todos los dispositivos
+- **Consumo de API externa** en tiempo real
+- **Interfaz intuitiva** con feedback visual inmediato
+- **Componentes reutilizables** y modulares
 
-## React Compiler
+## 🛠️ Tecnologías Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 18+** - Framework principal con Hooks
+- **JavaScript ES6+** - Lógica de aplicación
+- **CSS3 + Flexbox** - Estilos y diseño responsive
+- **Fetch API** - Consumo de APIs REST
+- **TheMealDB API** - Fuente de datos de platos
 
-## Expanding the ESLint configuration
+## 📁 Estructura del Proyecto
+src/
+├── components/
+│ ├── Header/ # Encabezado con nombre y slogan
+│ ├── MenuList/ # Contenedor de tarjetas de platos
+│ ├── MenuItem/ # Tarjeta individual de cada plato
+│ └── CategoryButtons/ # Filtros por categoría
+├── services/
+│ └── MenuService.js # Lógica de consumo de API
+├── App.jsx # Componente principal
+└── App.css # Estilos globales
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+text
+
+## 🎯 Funcionalidades Implementadas
+
+### Gestión de Estado con React Hooks
+```javascript
+const [items, setItems] = useState([]);
+const [isLoading, setIsLoading] = useState(true);
+const [error, setError] = useState(null);
+Consumo de API con Fetch
+javascript
+export async function getMenus(categoryKey) {
+  const res = await fetch(category.endpoint);
+  const data = await res.json();
+  
+  return data.meals.map(meal => ({
+    id: meal.idMeal,
+    name: meal.strMeal,
+    category: category.name,
+    thumb: meal.strMealThumb,
+    price: Math.floor(Math.random() * 30) + 10
+  }));
+}
+🌐 TheMealDB API
+Endpoints utilizados:
+
+Seafood: https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+
+Pasta: https://www.themealdb.com/api/json/v1/1/filter.php?c=Pasta
+
+Dessert: https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert
+
+Características:
+
+API gratuita sin autenticación requerida
+
+Datos en tiempo real de platos internacionales
+
+Imágenes de alta calidad incluidas
+
+Formato JSON fácil de procesar
+
+ Diseño y UX
+Principios de Usabilidad Aplicados
+Jerarquía Visual: Imagen → Nombre → Categoría → Precio
+
+Feedback Inmediato: Estados de carga y mensajes de error
+
+Navegación Intuitiva: Filtros claros y accesibles
+
+Diseño Responsive: Adaptable a móviles, tablets y desktop
+
+Esquema de Colores
+Primario: #001f37 (Azul oscuro)
+
+Secundario: #80375e (Rosa/vino)
+
+Fondo: #f1f1e6 (Crema suave)
+
+📱 Responsive Design
+La aplicación utiliza Flexbox para un layout flexible:
+
+css
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+ Instalación y Uso
+bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
