@@ -83,11 +83,13 @@ Navegación Intuitiva: Filtros claros y accesibles
 Diseño Responsive: Adaptable a móviles, tablets y desktop
 
 
-Vista previa del proyecto
+## Vista previa del proyecto
 
-![IPantallas grandes](src/images/img1.png)
-![Pantallas medianas](src/images/img2.png)
-![Pantallas pequeñas](src/images/img3.png)
+<p align="center">
+  <img src="https://github.com/IpialesNatt/ProyectoDAD-MenuRestaurante/raw/master/src/images/img1.png" width="300" />
+  <img src="https://github.com/IpialesNatt/ProyectoDAD-MenuRestaurante/raw/master/src/images/img2.png" width="300" />
+  <img src="https://github.com/IpialesNatt/ProyectoDAD-MenuRestaurante/raw/master/src/images/img3.png" width="300" />
+</p>
 
 
 Esquema de Colores
