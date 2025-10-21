@@ -1,8 +1,8 @@
-# 🍽️ Restaurante Bienvenido - Menú Digital
+# Restaurante Bienvenido - Menú Digital
 
 Una aplicación web moderna desarrollada en React que muestra un menú interactivo de restaurante consumiendo datos en tiempo real de TheMealDB API.
 
-## 🚀 Características Principales
+## Características Principales
 
 - **Menú interactivo** con filtros por categoría (Seafood, Pasta, Dessert)
 - **Diseño 100% responsive** para todos los dispositivos
@@ -10,7 +10,7 @@ Una aplicación web moderna desarrollada en React que muestra un menú interacti
 - **Interfaz intuitiva** con feedback visual inmediato
 - **Componentes reutilizables** y modulares
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 - **React 18+** - Framework principal con Hooks
 - **JavaScript ES6+** - Lógica de aplicación
@@ -20,17 +20,16 @@ Una aplicación web moderna desarrollada en React que muestra un menú interacti
 
 ## 📁 Estructura del Proyecto
 src/
-├── components/
-│ ├── Header/ # Encabezado con nombre y slogan
-│ ├── MenuList/ # Contenedor de tarjetas de platos
-│ ├── MenuItem/ # Tarjeta individual de cada plato
-│ └── CategoryButtons/ # Filtros por categoría
-├── services/
-│ └── MenuService.js # Lógica de consumo de API
-├── App.jsx # Componente principal
-└── App.css # Estilos globales
+- **components/** 
+    Header/ # Encabezado con nombre y slogan
+    MenuList/ # Contenedor de tarjetas de platos
+    MenuItem/ # Tarjeta individual de cada plato
+    CategoryButtons/ # Filtros por categoría
+- **services/** 
+    MenuService.js # Lógica de consumo de API
+- **App.jsx** # Componente principal
+- **App.css** # Estilos globales
 
-text
 
 ## 🎯 Funcionalidades Implementadas
 
@@ -53,6 +52,7 @@ export async function getMenus(categoryKey) {
     price: Math.floor(Math.random() * 30) + 10
   }));
 }
+
 🌐 TheMealDB API
 Endpoints utilizados:
 
